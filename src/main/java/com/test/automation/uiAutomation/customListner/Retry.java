@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 /**
  * 
- * @author Bhanu Pratap
+ * @author Praveen Reddy Narala
  *
  */
 public class Retry implements IRetryAnalyzer {

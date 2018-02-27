@@ -5,10 +5,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -17,7 +16,7 @@ import org.testng.Reporter;
 import com.test.automation.uiAutomation.testBase.TestBase;
 /**
  * 
- * @author Bhanu Pratap
+ * @author Praveen Reddy Narala
  *
  */
 public class Listener extends TestBase implements ITestListener{
@@ -49,7 +48,7 @@ public class Listener extends TestBase implements ITestListener{
 				String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/com/test/automation/uiAutomation/";
 				File destFile = new File((String) reportDirectory + "/failure_screenshots/" + methodName + "_" + formater.format(calendar.getTime()) + ".png");
 				
-				FileUtils.copyFile(scrFile, destFile);
+				FileHandler.copy(scrFile, destFile);
 				
 				Reporter.log("<a href='" + destFile.getAbsolutePath() + "'> <img src='" + destFile.getAbsolutePath() + "' height='100' width='100'/> </a>");
 				
@@ -83,7 +82,7 @@ public class Listener extends TestBase implements ITestListener{
 				String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/com/test/automation/uiAutomation/";
 				File destFile = new File((String) reportDirectory + "/failure_screenshots/" + methodName + "_" + formater.format(calendar.getTime()) + ".png");
 				
-				FileUtils.copyFile(scrFile, destFile);
+				FileHandler.copy(scrFile, destFile);
 				
 				Reporter.log("<a href='" + destFile.getAbsolutePath() + "'> <img src='" + destFile.getAbsolutePath() + "' height='100' width='100'/> </a>");
 				

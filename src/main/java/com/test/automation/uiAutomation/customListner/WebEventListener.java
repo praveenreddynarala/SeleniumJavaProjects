@@ -11,7 +11,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.test.automation.uiAutomation.testBase.TestBase;
 /**
  * 
- * @author Bhanu Pratap
+ * @author Praveen Reddy Narala
  *
  */
 public class WebEventListener extends TestBase implements WebDriverEventListener{
